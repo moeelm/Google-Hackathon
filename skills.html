@@ -5,6 +5,27 @@
 <script src="/__/firebase/4.0.0/firebase-app.js"></script>
   <script src="/__/firebase/4.0.0/firebase-auth.js"></script>
   <script src="/__/firebase/init.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAiDMYzRShnSxKjh5v8B4Nq3K_M0FS1efI",
+    authDomain: "uber4mentors.firebaseapp.com",
+    databaseURL: "https://uber4mentors.firebaseio.com",
+    projectId: "uber4mentors",
+    storageBucket: "uber4mentors.appspot.com",
+    messagingSenderId: "766399699218"
+  };
+  var defaultApp = firebase.initializeApp(config);
+
+console.log(defaultApp.name);  // "[DEFAULT]"
+
+// You can retrieve services via the defaultApp variable...
+var defaultDatabase = defaultApp.database();
+</script>
 <style>
 body {
   margin: 0;
@@ -173,16 +194,30 @@ function newElement() {
 }
 
 function createProfile() {
+      var skills = [];
+      for (i = 0; i < myNodelist.length; i++) {
+              var text = myNodelist[i].textContent;
+              text = text.substring(0, text.length - 1);
+              skills[text]=0;
+      }   
+
+
   firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    console.log(user);
+    writeUserData(user,skills);
   } else {
     console.log("signed out");
-
   }
 });
 
 }
+
+function writeUserData(user,skills) {
+      firebase.database().ref('users/'+user.uid).set({
+      email: user.email,
+      skills:skills
+    });
+    }
 
 
 </script>
