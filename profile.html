@@ -1,27 +1,94 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="profile.js"></script>
+
 <!------ Include the above in your HEAD tag ---------->
 
 <hr class="">
 <div class="container target">
     <div class="row">
-        <div class="col-sm-10">
-             <h1 class="">Expert Experton</h1>
-         
-           <button type="button" class="btn btn-info">Send me a message</button>
+        <nav class="navbar navbar-expand-lg" style="background-color: #1b1b1b" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger text-white stupid-font" href="signup.html"><img src="logo.jpg" width="45" height="43"alt="Cool logo"></a>
+          <h1 style="color:white">Ben Lemma</h1>
+        
+      </div>
+      </nav>
+        
+        <div class="col-xs-12">
+        <div class="col-sm-10" style=" width: 20%;">
+             <svg style=" align: auto; padding: 3px 0em 0px 0em; margin: 0em 0 0em 0em;"height="25" width="25">
+          <circle cx="10" cy="10" r="10" stroke="" stroke-width="1" fill="Green" />  
+          </svg>
+            </div>
+           <!-- <button type="button" class="btn btn-info">Contact me on google</button> -->
+            
         <div id="averagereviews"> </div>
        
 <br>
         </div>
-      <div class="col-sm-2"><a href="/users" class="pull-right">
+      <div style="padding: 3px 0em 15px 0em;" class="col-sm-2"><a href="/users" class="pull-right">
+          <img style="overflow: auto; border: 7px solid #10C2DF; border-radius: 50%; width: 130px; hight: 130px;" title="profile image" class="img-circle img-responsive" src="images/Unknown.png"></a>
           
-          <img style=" border: 7px solid #10C2DF; border-radius: 50%; width: 130px; height: 130px;" title="profile image" class="img-circle img-responsive" src="images/blank+profile.png"></a>
-
         </div>
     </div>
-  <br>
-    <div class="row">
+    <div class="container" style="width: 60%; float: left">
+	<div class="row">                   
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                <span class="sr-only">6 Complete</span>
+            </div>
+            <span class="progress-type">HTML / HTML5</span>
+            <span class="progress-completed">&ensp;&ensp;&ensp;&ensp;6</span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="10" style="width: 40%">
+                <span class="sr-only">4 Complete (success)</span>
+            </div>
+            <span class="progress-type">ASP.Net</span>
+            <span class="progress-completed">&ensp;&ensp;&ensp;&ensp;4</span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="10" style="width: 20%">
+                <span class="sr-only">2 Complete (info)</span>
+            </div>
+            <span class="progress-type">Java</span>
+            <span class="progress-completed">&ensp;&ensp;&ensp;&ensp;2</span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="6" aria-valuemin="0" aria-valuemax="10" style="width: 60%">
+                <span class="sr-only">6 Complete (warning)</span>
+            </div>
+            <span class="progress-type">JavaScript / jQuery</span>
+            <span class="progress-completed">&ensp;&ensp;&ensp;&ensp;6</span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="10" style="width: 80%">
+                <span class="sr-only">8 Complete (danger)</span>
+            </div>
+            <span class="progress-type">CSS / CSS3</span>
+            <span class="progress-completed">&ensp;&ensp;&ensp;&ensp;8</span>
+        </div>
+	</div>
+</div>
+    <div style="width: 30%; float: right;">
+<button style = "width: 100%; hight: 10em; bottom: 0px; " type="button" class="btn btn-info">Hangout</button>
+<!-- <form role="form" id="contact-form" class="contact-form">
+                  	<div class="row">
+                  		<div class="col-md-12">
+                  		<div class="form-group">
+                            <textarea class="form-control textarea" rows="6" name="Message" id="Message" placeholder="Message"></textarea>
+                  		</div>
+                  	</div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-12">
+                  <button type="submit" class="btn main-btn pull-right">Send a message</button>
+                  </div>
+                  </div>
+                </form> -->
+        </div>
+    <div class="row" style="float: clear; padding: 17em 0 0 0;">
         <div class="col-sm-3">
             <!--left col-->
             <div class="panel panel-default">
@@ -56,47 +123,8 @@
 
                 </div>
             </div>
-
-
-
-            <div id="push"></div>
         </div>
-         <div class="panel panel-default">
-                <div class="panel-heading">Skills</div>
-                <div class="panel-body">
-                     <!-- Start Progress Skills -->
-                    
-                    <div class="col-md-5">
-                        <div class="skills-progress">
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-                                    Html5 / Css3
-                                </div>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-                                    PHP / MySQL
-                                </div>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                    Javascript / jQuery
-                                </div>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
-                                    Wordpress
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- End Progress Skills -->
-                    <i class="fa fa-facebook fa-2x"></i>  <i class="fa fa-github fa-2x"></i> 
-                    <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i>  <i class="fa fa-google-plus fa-2x"></i>
-
-                </div>
-            </div>
+         
         <footer id="footer">
             <div class="row-fluid">
                 <div class="span3">
