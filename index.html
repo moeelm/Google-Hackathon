@@ -87,6 +87,8 @@ limitations under the License.
     }
     // [END buttoncallback]
 
+
+
     /**
      * initApp handles setting up UI event listeners and registering Firebase auth listeners:
      *  - firebase.auth().onAuthStateChanged: This listener is called when the user is signed in or
@@ -97,6 +99,8 @@ limitations under the License.
       // [START authstatelistener]
       firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
+          window.location.href="skills.html";
+
           // User is signed in.
           var displayName = user.displayName;
           var email = user.email;
@@ -108,15 +112,16 @@ limitations under the License.
           // [START_EXCLUDE]
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
           document.getElementById('quickstart-sign-in').textContent = 'Sign out';
-         // document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
+          document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
+
           // [END_EXCLUDE]
         } else {
           // User is signed out.
           // [START_EXCLUDE]
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
           document.getElementById('quickstart-sign-in').textContent = 'Sign in with Google';
-      //    document.getElementById('quickstart-account-details').textContent = 'null';
-         // document.getElementById('quickstart-oauthtoken').textContent = 'null';
+          document.getElementById('quickstart-account-details').textContent = 'null';
+          document.getElementById('quickstart-oauthtoken').textContent = 'null';
           // [END_EXCLUDE]
         }
         // [START_EXCLUDE]
@@ -140,7 +145,7 @@ limitations under the License.
   <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
     <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
       <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--8-col-desktop">
-        <a href="/"><h3>Monami: Programming Help</h3></a>
+        <a href="/"><h3>Monami: Programming Mentorship</h3></a>
       </div>
     </div>
   </header>
@@ -157,15 +162,13 @@ limitations under the License.
           <p>Sign in with your Google account below.</p>
 
           <!-- Button that handles sign-in/sign-out -->
-          <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign in with Google</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign in with Google</button>
 
-          <!-- Container where we'll display the user details -->
-          <div class="quickstart-user-details-container">
-            Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
-            <div>Firebase auth <code>currentUser</code> object value:</div>
-            <pre><code id="quickstart-account-details">null</code></pre>
-           <!-- <div>Google OAuth Access Token:</div>-->
-            <pre><code id="quickstart-oauthtoken">null</code></pre>
+          <!--<div class="quickstart-user-details-container">
+            <span id="quickstart-sign-in-status"></span>
+            <div>Firebase auth <code>currentUser</code></div>
+            <pre><code id="quickstart-account-details"></code></pre>
+            <pre><code id="quickstart-oauthtoken"></code></pre>-->
           </div>
         </div>
       </div>
